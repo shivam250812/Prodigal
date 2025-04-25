@@ -1,5 +1,7 @@
 # Government Schemes Information Retrieval System
 
+Created a Streamlit App
+![Streamlit](https://drive.google.com/uc?export=view&id=1fb3bZ5FiS9Nc8DKyDnTe3-XwpGIVyunc)
 ## Overview
 This project implements a retrieval-augmented generation (RAG) system for querying information about government schemes in India. It processes CSV data containing scheme details, generates embeddings for semantic search, and provides concise responses to user queries using a transformer-based model.
 
