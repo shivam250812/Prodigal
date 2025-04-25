@@ -21,7 +21,7 @@ This project implements a retrieval-augmented generation (RAG) system for queryi
 
 ## Project Structure
 - `schemes_data_web.csv`: Input CSV file with raw scheme data.
-- `cleaned_schemes_data_web.csv`: Cleaned CSV output after processing.
+- `clean.csv`: Cleaned CSV output after processing.
 - `scheme_documents.json`: JSON file with processed document objects.
 - `scheme_documents_with_embeddings.json`: JSON file with documents and their embeddings.
 - `scheme_embeddings.faiss`: FAISS index for vector search.
