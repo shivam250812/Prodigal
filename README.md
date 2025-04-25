@@ -2,8 +2,38 @@
 
 Created a Streamlit App
 ![Streamlit](https://drive.google.com/uc?export=view&id=1fb3bZ5FiS9Nc8DKyDnTe3-XwpGIVyunc)
+
+
 ## Overview
 This project implements a retrieval-augmented generation (RAG) system for querying information about government schemes in India. It processes CSV data containing scheme details, generates embeddings for semantic search, and provides concise responses to user queries using a transformer-based model.
+
+```mermaid
+graph TD
+    A[Start] --> B[Load CSV File]
+    B -->|Read clean.csv| C[Create Document Objects]
+    C -->|Extract context & metadata| D[Embed Context]
+    D -->|Use BAAI/bge-small-en-v1.5| E[Add Embeddings to Metadata]
+    E -->|Store embeddings| F[Create FAISS Index]
+    F -->|Save documents & index| G[Input Query]
+    G -->|e.g., Support for small businesses| H[Retrieve Top 3 Chunks]
+    H -->|FAISS cosine similarity| I[Augment Query]
+    I -->|Combine query & contexts| J[Generate Response]
+    J -->|Use google/flan-t5-base| K[Output Response]
+    K --> L[End]
+
+    subgraph Data Preparation
+        B --> C --> D --> E --> F
+    end
+
+    subgraph Retrieval
+        G --> H
+    end
+
+    subgraph Response Generation
+        I --> J --> K
+    end
+```
+
 
 ## Features
 - **Data Cleaning**: Removes HTML tags, special characters, and extra whitespace from CSV data.
