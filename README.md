@@ -66,7 +66,7 @@ graph TD
 
 2. **Run the Script**:
    ```bash
-   python rag_pipeline.py
+   python rag-pipeline.py
    ```
    - Cleans the CSV data.
    - Generates JSON documents with extracted states and context.
