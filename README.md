@@ -96,7 +96,7 @@ print("Response:", response)
 **Sample Output**:
 ```
 Query: Support for small businesses in Assam
-Response: The PMEGP scheme supports small businesses in Assam by providing financial assistance for setting up micro-enterprises.
+Response: The Biponi Scheme small businesses in Assam by providing financial assistance for setting up micro-enterprises.
 ```
 
 ## Notes
